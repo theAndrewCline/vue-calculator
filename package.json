@@ -1,0 +1,26 @@
+{
+  "name": "vue-calculator",
+  "version": "1.0.0",
+  "description": "calculator made with vuejs",
+  "main": "app.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theAndrewCline/vue-calculator.git"
+  },
+  "keywords": [
+    "calculator"
+  ],
+  "author": "Andrew Cline",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theAndrewCline/vue-calculator/issues"
+  },
+  "homepage": "https://github.com/theAndrewCline/vue-calculator#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
