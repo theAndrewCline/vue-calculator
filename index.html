@@ -16,7 +16,7 @@
 
         <div id="root">
             <div class="input">
-                <p>{{ equation }}</p>
+                <p class="equation">{{ equation }}</p>
                 <h1>{{ value }}</h1>
             </div>
             <div class="numbers">
@@ -30,6 +30,7 @@
                 <button id="8" @click="changeValue">8</button>
                 <button id="9" @click="changeValue">9</button>
                 <button class="zero" id="0" @click="changeValue">0</button>
+                <button id="." @click="changeValue">.</button>
             </div>
             <div class="operators">
                 <button class="clear-line" @click="clearLine">CL</button>
@@ -37,10 +38,10 @@
                 <button class="enter" @click="enter">Enter</button>
             </div>
             <div class="math">
-                <button id="+" @click="add">+</button>
-                <button id="-" @click="subtract">-</button>
-                <button id="*" @click="multiply">*</button>
-                <button id="/" @click="divide">/</button>
+                <button id="+" @click="math">+</button>
+                <button id="-" @click="math">-</button>
+                <button id="*" @click="math">*</button>
+                <button id="/" @click="math">/</button>
             </div>
         </div>
 
