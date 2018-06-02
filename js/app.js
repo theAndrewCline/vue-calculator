@@ -6,7 +6,11 @@ const app = new Vue({
 	},
 	methods: {
 		add: function() {
-			console.log('add')
+            this.equation = this.value.toString + ' +'
+            this.value = 0
+
+            console.log('add')
+
 		},
 		subtract: function() {
 			console.log('subtract')
@@ -24,6 +28,16 @@ const app = new Vue({
 				this.value = Number(this.value.toString() + event.target.id)
 			}
 			console.log(this.value)
-		}
+        },
+        clearLine: function() {
+            this.value = 0
+        },
+        clearEverything: function() {
+            this.value = 0
+            this.equation = ''
+        },
+        enter: function() {
+            console.log('enter')
+        }
 	}
 })
