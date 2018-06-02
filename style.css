@@ -8,9 +8,13 @@
 
 body {
     background: #e9e9e9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
-p {
+button {
     background: #2196F3;
     border: solid .2px #eee;
     font-family: 'Roboto', sans-serif;
@@ -21,20 +25,12 @@ p {
     align-self: stretch;
 }
 
- {
-
-}
-
-.math > p {
-    font-weight: 500;
-}
-
-.root {
+#root {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7 , 1fr)
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     height: 600px;
-    width: 400px;
+    width: 600px;
 }
 
 .math {
@@ -42,8 +38,10 @@ p {
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 5;
-
+    display: grid;
+    grid-template-columns: 1fr;
 }
+
 .numbers{
     grid-column-start: 1;
     grid-column-end: 4;
@@ -53,16 +51,22 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.operators {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4 , 1fr);
+}
 .enter {
     background: #673AB7;
     border: solid .2px #eee;
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
-    text-align: center;
     line-height: 4em;
-    justify-self: stretch;
-    align-self: stretch;
-    grid-column: span 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
 
 }
 
@@ -75,7 +79,7 @@ p {
     line-height: 4em;
     justify-self: stretch;
     align-self: stretch;
-    grid-column: span 4;
+    grid-column: span 5;
     grid-row-start: 1;
     grid-row-end: 2;
 }

@@ -12,28 +12,33 @@
 
 <body>
 
-    <div class="root">
-        <div class="input" v-on:click="changeValue('0')">
-            {{display}}
+    <div id="root">
+        <div class="input" @click="changeValue('0')">
+            <p>{{ equation }}</p>
+            <h1>{{ value }}</h1>
         </div>
         <div class="numbers">
-            <p id="1" v-on:click="changeValue">1</p>
-            <p id="2" v-on:click="changeValue">2</p>
-            <p id="3" v-on:click="changeValue">3</p>
-            <p id="4" v-on:click="changeValue">4</p>
-            <p id="5" v-on:click="changeValue">5</p>
-            <p id="6" v-on:click="changeValue">6</p>
-            <p id="7" v-on:click="changeValue">7</p>
-            <p id="8" v-on:click="changeValue">8</p>
-            <p id="9" v-on:click="changeValue">9</p>
-            <p class="zero" id="0" v-on:click="changeValue">0</p>
+            <button id="1" @click="changeValue">1</button>
+            <button id="2" @click="changeValue">2</button>
+            <button id="3" @click="changeValue">3</button>
+            <button id="4" @click="changeValue">4</button>
+            <button id="5" @click="changeValue">5</button>
+            <button id="6" @click="changeValue">6</button>
+            <button id="7" @click="changeValue">7</button>
+            <button id="8" @click="changeValue">8</button>
+            <button id="9" @click="changeValue">9</button>
+            <button class="zero" id="0" @click="changeValue">0</button>
         </div>
-        <button class="enter">Enter</button>
+        <div class="operators">
+            <button class="enter">Enter</button>
+            <button class="clear-line">CL</button>
+            <button class="clear-everything">CE</button>
+        </div>
         <div class="math">
-            <p id="+">+</p>
-            <p id="-">-</p>
-            <p id="*">*</p>
-            <p id="/">/</p>
+            <button id="+">+</button>
+            <button id="-">-</button>
+            <button id="*">*</button>
+            <button id="/">/</button>
         </div>
     </div>
     <script src="./js/app.js"></script>

@@ -1,29 +1,30 @@
 const app = new Vue({
-    el:'.root',
+    el:'#root',
     data: {
-        display: '100'
+        value: 0,
+        equation: ''
     },
     methods: {
-        add: () => {
+        add: function() {
 
         },
-        subract: () => {
+        subract: function() {
 
         },
-        multiply: () => {
+        multiply: function() {
 
         },
-        divide: () => {
+        divide: function() {
 
         },
-        changeValue: (event) => {
+        changeValue: function(event) {
 
-            if ( this.display === '0') {
-                this.display = event.target.id
+            if ( this.value === 0) {
+                this.value = Number(event.target.id)
             } else {
-                this.display = this.display + event.target.id
+                this.value= Number(this.value.toString() + event.target.id)
             }
-            console.log(this.display)
+            console.log(this.value)
         }
 
     }
