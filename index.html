@@ -12,34 +12,38 @@
 
 <body>
 
-    <div id="root">
-        <div class="input" @click="changeValue('0')">
-            <p>{{ equation }}</p>
-            <h1>{{ value }}</h1>
+    <div class="container">
+
+        <div id="root">
+            <div class="input" @click="changeValue('0')">
+                <p>{{ equation }}</p>
+                <h1>{{ value }}</h1>
+            </div>
+            <div class="numbers">
+                <button id="1" @click="changeValue">1</button>
+                <button id="2" @click="changeValue">2</button>
+                <button id="3" @click="changeValue">3</button>
+                <button id="4" @click="changeValue">4</button>
+                <button id="5" @click="changeValue">5</button>
+                <button id="6" @click="changeValue">6</button>
+                <button id="7" @click="changeValue">7</button>
+                <button id="8" @click="changeValue">8</button>
+                <button id="9" @click="changeValue">9</button>
+                <button class="zero" id="0" @click="changeValue">0</button>
+            </div>
+            <div class="operators">
+                <button class="clear-line" @click="clearLine">CL</button>
+                <button class="clear-everything" @click="clearEverything">CE</button>
+                <button class="enter" @click="enter">Enter</button>
+            </div>
+            <div class="math">
+                <button id="+" @click="add">+</button>
+                <button id="-" @click="subtract">-</button>
+                <button id="*" @click="mulitiply">*</button>
+                <button id="/" @click="divide">/</button>
+            </div>
         </div>
-        <div class="numbers">
-            <button id="1" @click="changeValue">1</button>
-            <button id="2" @click="changeValue">2</button>
-            <button id="3" @click="changeValue">3</button>
-            <button id="4" @click="changeValue">4</button>
-            <button id="5" @click="changeValue">5</button>
-            <button id="6" @click="changeValue">6</button>
-            <button id="7" @click="changeValue">7</button>
-            <button id="8" @click="changeValue">8</button>
-            <button id="9" @click="changeValue">9</button>
-            <button class="zero" id="0" @click="changeValue">0</button>
-        </div>
-        <div class="operators">
-            <button class="enter">Enter</button>
-            <button class="clear-line">CL</button>
-            <button class="clear-everything">CE</button>
-        </div>
-        <div class="math">
-            <button id="+">+</button>
-            <button id="-">-</button>
-            <button id="*">*</button>
-            <button id="/">/</button>
-        </div>
+
     </div>
     <script src="./js/app.js"></script>
 </body>
